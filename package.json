@@ -1,0 +1,17 @@
+{
+  "name": "lnug-talk",
+  "version": "0.0.1",
+  "description": "Examples of different option parsing libraries in Node.JS for LNUG http://lanyrd.com/2012/lnug-april/",
+  "author": "Dom Harrington <dom.harrington@clock.co.uk>",
+  "contributors": [
+    "Dom Harrington <dom.harrington@clock.co.uk>"
+  ],
+  "dependencies": {
+    "commander": "0.6.0",
+    "optimist": "0.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/domharrington/lnug-talk.git"
+  }
+}
