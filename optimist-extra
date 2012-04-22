@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+var optimist = require('optimist')
+  , version = '0.0.1';
+
+var program = optimist.usage('Usage: optimist.js [options]')
+  .options('h', { alias: 'help', describe: 'output usage information' })
+  .options('V', { alias: 'version', describe: 'output the version number' })
+  .options('p', { alias: 'peppers', describe: 'Add peppers' })
+  .options('b', { alias: 'bbq', describe: 'Add bbq sauce' })
+  .options('c', { alias: 'cheese [type]', default: 'cheddar', describe: 'Add the specified type of cheese' })
+  .argv;
+
+if (program.h) return optimist.showHelp();
+
+if (program.V) return console.log(version);
+
+console.log('you ordered a pizza with:');
+if (program.peppers) console.log('  - peppers');
+if (program.bbq) console.log('  - bbq');
+console.log('  - %s cheese', program.c);

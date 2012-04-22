@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+var program = require('optimist').argv;
+
+console.log('you ordered a pizza with:');
+if (program.peppers || program.p) console.log('  - peppers');
+if (program.bbq || program.b) console.log('  - bbq');
+console.log('  - %s cheese', program.cheese || program.c || 'cheddar');
